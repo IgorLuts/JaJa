@@ -16,4 +16,8 @@ class ShoppingCart < ActiveRecord::Base
     old_record = ShoppingCart.where('created_at < ?', 7.days.ago)
     delete(old_record)
   end
+
+  def empty?
+    has_items?
+  end
 end
