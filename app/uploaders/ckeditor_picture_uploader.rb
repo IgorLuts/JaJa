@@ -1,10 +1,8 @@
 # encoding: utf-8
 class CkeditorPictureUploader < CarrierWave::Uploader::Base
+  include Cloudinary::CarrierWave
   include Ckeditor::Backend::CarrierWave
-
   include CarrierWave::MiniMagick
-
-  storage :file
 
   def store_dir
     "uploads/ckeditor/pictures/#{model.id}"

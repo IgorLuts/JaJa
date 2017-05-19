@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314155331) do
+ActiveRecord::Schema.define(version: 20170519185215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -158,6 +158,15 @@ ActiveRecord::Schema.define(version: 20170314155331) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
+  create_table "galleries", force: :cascade do |t|
+    t.integer  "product_id"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "galleries", ["product_id"], name: "index_galleries_on_product_id", using: :btree
+
   create_table "orders", force: :cascade do |t|
     t.string   "name"
     t.text     "adress"
@@ -202,7 +211,6 @@ ActiveRecord::Schema.define(version: 20170314155331) do
     t.float    "price"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
-    t.json     "gallery"
     t.string   "slug"
     t.boolean  "available",        default: true
     t.string   "feature"
@@ -268,6 +276,7 @@ ActiveRecord::Schema.define(version: 20170314155331) do
   add_foreign_key "categories_products", "products"
   add_foreign_key "comment_replies", "comments"
   add_foreign_key "comments", "products"
+  add_foreign_key "galleries", "products"
   add_foreign_key "orders", "users"
   add_foreign_key "product_tags", "products"
   add_foreign_key "product_tags", "tags"

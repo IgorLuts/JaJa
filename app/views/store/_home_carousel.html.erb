@@ -12,7 +12,7 @@ _________________________________________________________ -->
         <div class="item">
           <div class="row">
               <div class="col-sm-4">
-                <%= image_tag product.image.preview, alt: product.title, class:"img-responsive" %>
+                <%= image_tag product.image_url(:preview), alt: product.title, class:"img-responsive" %>
               </div>
               <div class="col-sm-8">
                 <div class="text">

@@ -7,11 +7,13 @@ class Product < ActiveRecord::Base
   has_many :tags, through: :product_tags
   has_many :comments, dependent: :destroy
   has_and_belongs_to_many :categories
-  has_many :attachments
+  has_many :attachments, dependent: :destroy
+  has_many :galleries, dependent: :destroy
+
   accepts_nested_attributes_for :attachments, allow_destroy: true
+  accepts_nested_attributes_for :galleries, allow_destroy: true
 
   mount_uploader :image, ImageUploader
-  mount_uploaders :gallery, GalleryUploader
 
   scope :all_except, ->(product) { where.not(id: product.id) }
   scope :similar, ->(product) {

@@ -20,7 +20,7 @@
                     <tr>
                         <td>
                             <%= link_to product_path(shopping_cart_item.item) do %>
-                                <%= image_tag shopping_cart_item.item.image.preview, class:"img-responsive" %>
+                                <%= image_tag shopping_cart_item.item.image_url(:preview), class:"img-responsive" %>
                                     <% end %>
                         </td>
                         <td>
