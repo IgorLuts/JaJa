@@ -3597,7 +3597,7 @@ a:hover, a:focus {
 
 .btn-primary:hover {
 color: #fff;
-background-color: #006600;
+background-color: #006600 !important;
 }
 
 #top .login a.btn.btn-primary {
@@ -3606,5 +3606,9 @@ color: green;
 
 #top .login a.btn.btn-primary:hover {
   color: #fff;
-  border-color: #006600;
+  border-color: #006600 !important;
+}
+
+.btn-primary:hover {
+  border-color: #006600 !important;
 }
