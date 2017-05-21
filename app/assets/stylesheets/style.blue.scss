@@ -3612,3 +3612,9 @@ color: green;
 .btn-primary:hover {
   border-color: #006600 !important;
 }
+
+.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background-color: #66ff00;
+  border-color: #66ff00;
+}
