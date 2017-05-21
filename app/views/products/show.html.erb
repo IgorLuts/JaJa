@@ -76,50 +76,51 @@
             </div>
           <% end %>
         </div>
+        <div class="box product_tab" id="details">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Описание</a></li>
+              <% if @product.characteristics && @product.characteristics != "" %>
+                <li role="presentation"><a href="#characteristics" aria-controls="characteristics" role="tab" data-toggle="tab">Характеристики</a></li>
+              <% end %>
+              <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">Отзывы (<%= @comments_count %>)</a></li>
+              <li role="presentation"><a href="#recent" aria-controls="recent" role="tab" data-toggle="tab">Похожие товары</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="description" itemprop="description">
+                <%= sanitize @product.description %>
+                <div class="attachment">
+                    <p>Скачать информацию о бренде <strong><%= @product.title %></strong> на русском</p>
+                    <a type="button" class="btn btn-danger" target='_blank' href=<%= @product.attachments.first.try(:file_url) %>>
+                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                      Скачать
+                    </a>
+                </div>
+                <hr>
+                <div class="social-likes" data-title="<%= @product.title %>" data-counters="no">
+                  <div class="facebook" title="Поделиться ссылкой на Фейсбуке">Facebook</div>
+                  <div class="twitter" title="Поделиться ссылкой в Твиттере">Twitter</div>
+                  <div class="vkontakte" title="Поделиться ссылкой во Вконтакте">Вконтакте</div>
+                  <div class="odnoklassniki" title="Поделиться ссылкой в Одноклассниках">Одноклассники</div>
+                  <div class="plusone" title="Поделиться ссылкой в Гугл-плюсе">Google+</div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="characteristics">
+                <%= sanitize @product.characteristics, tags: %w(table h2 tbody tr td div p) %>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="review">
+                <%= render 'comments/comment' %>
+              </div>
+              <div role="tabpanel" class="tab-pane clearfix" id="recent">
+                <%= render "products/product", products: @similar %>
+              </div>
+            </div>
       </div>
     </div>
 
-    <div class="box product_tab" id="details">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Описание</a></li>
-          <% if @product.characteristics && @product.characteristics != "" %>
-            <li role="presentation"><a href="#characteristics" aria-controls="characteristics" role="tab" data-toggle="tab">Характеристики</a></li>
-          <% end %>
-          <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">Отзывы (<%= @comments_count %>)</a></li>
-          <li role="presentation"><a href="#recent" aria-controls="recent" role="tab" data-toggle="tab">Похожие товары</a></li>
-        </ul>
 
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="description" itemprop="description">
-            <%= sanitize @product.description %>
-            <div class="attachment">
-                <p>Скачать информацию о бренде <strong><%= @product.title %></strong> на русском</p>
-                <a type="button" class="btn btn-danger" target='_blank' href=<%= @product.attachments.first.try(:file_url) %>>
-                  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                  Скачать
-                </a>
-            </div>
-            <hr>
-            <div class="social-likes" data-title="<%= @product.title %>" data-counters="no">
-              <div class="facebook" title="Поделиться ссылкой на Фейсбуке">Facebook</div>
-              <div class="twitter" title="Поделиться ссылкой в Твиттере">Twitter</div>
-              <div class="vkontakte" title="Поделиться ссылкой во Вконтакте">Вконтакте</div>
-              <div class="odnoklassniki" title="Поделиться ссылкой в Одноклассниках">Одноклассники</div>
-              <div class="plusone" title="Поделиться ссылкой в Гугл-плюсе">Google+</div>
-            </div>
-          </div>
-          <div role="tabpanel" class="tab-pane" id="characteristics">
-            <%= sanitize @product.characteristics, tags: %w(table h2 tbody tr td div p) %>
-          </div>
-          <div role="tabpanel" class="tab-pane" id="review">
-            <%= render 'comments/comment' %>
-          </div>
-          <div role="tabpanel" class="tab-pane clearfix" id="recent">
-            <%= render "products/product", products: @similar %>
-          </div>
-        </div>
 
   </div>
 </div>
