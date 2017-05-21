@@ -30,10 +30,10 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp.yandex.ru",
     port: 587,
-    domain: "xn--80aal0a7a.xn--j1amh",
+    domain: "jaja.com.ua",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "admin@xn--80aal0a7a.xn--j1amh",
+    user_name: "admin@jaja.com.ua",
     password: Rails.application.secrets.mail_password
   }
   # ActionMailer Config
