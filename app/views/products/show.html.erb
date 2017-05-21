@@ -42,7 +42,7 @@
                     <meta itemprop="price" content="<%= @product.price %>">
                     <meta itemprop="priceCurrency" content="UAH">
               </div>
-                <p><strong>Производитель:&nbsp</strong> <%= @product.brand.try(:name) %></p>
+                <p><strong>Страна производитель:&nbsp</strong> <%= @product.brand.try(:name) %></p>
                 <hr>
                   <%= form_for ShoppingCartItem.new, :url => shopping_cart_items_path(:product_id => @product), :html => { :class => 'form-inline cart_item_form'} do |f| %>
                     <div class="form-group">
@@ -93,7 +93,7 @@
           <div role="tabpanel" class="tab-pane active" id="description" itemprop="description">
             <%= sanitize @product.description %>
             <div class="attachment">
-                <p>Скачать информацию о бренде на русском</p>
+                <p>Скачать информацию о бренде</p>
                 <a type="button" class="btn btn-danger" target='_blank' href=<%= @product.attachments.first.try(:file_url) %>>
                   <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
                   Скачать
