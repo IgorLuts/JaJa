@@ -93,7 +93,7 @@
           <div role="tabpanel" class="tab-pane active" id="description" itemprop="description">
             <%= sanitize @product.description %>
             <div class="attachment">
-                <p>Скачать информацию о бренде <strong><%= @product.title %></strong> на русском</p>
+                <p>Скачать информацию о бренде на русском</p>
                 <a type="button" class="btn btn-danger" target='_blank' href=<%= @product.attachments.first.try(:file_url) %>>
                   <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
                   Скачать
