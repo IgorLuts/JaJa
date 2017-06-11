@@ -239,9 +239,6 @@ ul.list-style-none {
     background-color: #66FF00;
     border-color: #66ff00;
 }
-.padd {
-  width: 3px;
-}
 #top {
   background: #555555;
   padding: 10px 0;
@@ -3659,6 +3656,7 @@ a.list-group-item.active > .badge,
   color: green;
   background-color: #66ff00;
   border-color: #66ff00;
+  margin-left: 5px;
 }
 
 a:hover, a:focus {
