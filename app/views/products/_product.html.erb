@@ -9,7 +9,7 @@
               <h3>
                   <%= link_to product.title, product_path(product) %>
               </h3>
-              <p><strong>Страна производитель:&nbsp</strong> <%= product.brand.try(:name) %></p>
+              <p><strong>Размер:&nbsp</strong> <%= product.brand.try(:name) %></p>
                   <p class="price"><%= number_to_currency product.price %></p>
               <p>
                   <%= link_to "Подробно", product_path(product), class:"btn btn-default" %>
