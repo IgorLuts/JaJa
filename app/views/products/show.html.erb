@@ -4,7 +4,8 @@
 
 <%= render 'layouts/breadcrumbs' %>
 
-<div class="col-md-3">
+<!-- <div class="col-md-3"> -->
+<div class="col-md-12">
   <%= yield(:user_menu) %>
   <%= render 'layouts/sidebar' %>
 </div>
@@ -65,7 +66,11 @@
           <iframe class="embed-responsive-item" src="<%= @product.video_url %>"></iframe>
         </div> -->
 
-<div class="row" id="thumbs">
+
+
+
+
+        <div class="row" id="thumbs">
         <!-- <div class="col-md-6"> -->
           <% @product.galleries.each_with_index do |gallery, index| %>
             <div class="col-xs-4 margin-bottom-10">
@@ -124,4 +129,5 @@
           </div>
         </div>
   </div>
+</div>
 </div>
