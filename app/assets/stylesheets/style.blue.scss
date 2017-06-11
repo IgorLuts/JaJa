@@ -2443,23 +2443,13 @@ fieldset[disabled] .btn-template-primary.active {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-// #thumbs a {
-//   display: block;
-//   border: solid 1px transparent;
-// }
-// #thumbs a.active {
-//   border-color: green;
-// }
 #thumbs a {
   display: block;
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-  border: solid 2px transparent;
+  border: solid 1px transparent;
 }
 #thumbs a.active {
-  border-color: #4fbfa8;
+  border-color: green;
 }
-
 #product-social {
   text-align: center;
 }
@@ -3716,4 +3706,3 @@ color: green;
   border-color: rgba(102, 255, 0, 0.75);
   background-color: rgba(102, 255, 0, 0.75);
 }
-// добавленное
