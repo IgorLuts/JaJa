@@ -66,9 +66,9 @@
         </div>
 
 
-        <div class="col-md-6 col-xs-6">
+        <div class="col-md-6 col-xs-12">
           <% @product.galleries.each_with_index do |gallery, index| %>
-            <div class="col-xs-4 margin-bottom-10">
+            <div class="col-xs-4">
               <%=link_to gallery.image_url, rel: "prettyPhoto[gallery1]", class: "thumb"  do %>
                 <%= image_tag gallery.image_url(:thumb), alt: "#{@product.title} preview#{index}", class: "img-responsive" %>
               <% end %>
