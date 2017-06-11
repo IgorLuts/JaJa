@@ -70,8 +70,8 @@
 
 
 
-        <div class="row" id="thumbs">
-        <!-- <div class="col-md-6"> -->
+
+        <div class="col-md-6">
           <% @product.galleries.each_with_index do |gallery, index| %>
             <div class="col-xs-4 margin-bottom-10">
               <%=link_to gallery.image_url, rel: "prettyPhoto[gallery1]", class: "thumb"  do %>
