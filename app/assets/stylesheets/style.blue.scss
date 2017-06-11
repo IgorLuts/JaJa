@@ -3706,3 +3706,13 @@ color: green;
   border-color: rgba(102, 255, 0, 0.75);
   background-color: rgba(102, 255, 0, 0.75);
 }
+// добавленное
+#content #thumbs a {
+  display: block;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  border: solid 2px transparent;
+}
+#content #thumbs a.active {
+  border-color: #4fbfa8;
+}
