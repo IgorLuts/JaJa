@@ -239,6 +239,10 @@ ul.list-style-none {
     background-color: #66FF00;
     border-color: #66ff00;
 }
+.btn-success:hover {
+  background-color: #006600;
+  border-color: #006600;
+}
 #top {
   background: #555555;
   padding: 10px 0;
@@ -290,13 +294,13 @@ ul.list-style-none {
   color: #999999;
 }
 #top #login-modal .modal-header {
-  background: #4fbfa8;
+  background: #66ff00;
 }
 #top #login-modal .modal-header h4 {
   color: #fff;
 }
 #top #login-modal a {
-  color: #4fbfa8;
+  color: #66ff00;
 }
 #top #login-modal p {
   font-weight: 300;
