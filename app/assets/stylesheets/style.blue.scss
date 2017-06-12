@@ -379,9 +379,6 @@ ul.list-style-none {
     margin-bottom: 20px;
     text-align: -webkit-center;
     }
-    .panel.sidebar-menu {
-      text-align: center;
-    }
 }
 #top.light {
   background: #fff;
@@ -3737,5 +3734,5 @@ button.btn.btn-no-margin {
   }
 
   .cart_item_form input#shopping_cart_item_quantity {
-    width: 150px;
+      width: 150px !important;
   }
