@@ -302,9 +302,6 @@ ul.list-style-none {
     margin-bottom: 20px;
     text-align: -webkit-center;
     }
-    .panel .panel-default .sidebar-menu {
-      text-align: -webkit-center;
-    }
 }
 #top.light {
   background: #fff;
@@ -1200,6 +1197,7 @@ fieldset[disabled] .btn-template-primary.active {
   .home-carousel .right {
     text-align: right;
   }
+
 }
 .home-carousel h1,
 .home-carousel h2,
@@ -3661,4 +3659,10 @@ button.btn.btn-no-margin {
 
   .cart_item_form input#shopping_cart_item_quantity {
       width: 145px !important;
+  }
+
+  @media (min-width: 992px) {
+    .panel.sidebar-menu.fclass {
+      text-align: center;
+    }
   }
