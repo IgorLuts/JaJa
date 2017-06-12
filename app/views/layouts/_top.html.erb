@@ -1,12 +1,12 @@
 <div id="top">
     <div class="container">
         <div class="row">
-            <div class="col-xs-5 contact">
+            <div class="col-sm-5 contact">
                 <a href="#" data-toggle="modal" data-target="#callback-modal" class="btn btn-primary btn-sm"><i class="fa fa-phone">
                     </i>Заказать обратный звонок
                 </a>
             </div>
-            <div class="col-xs-7">
+            <div class="col-sm-7">
                 <div class="login">
                   <% if user_signed_in? %>
                       <%= link_to "Выход", destroy_user_session_path, method: :delete %>
