@@ -367,7 +367,7 @@ ul.list-style-none {
 }
 @media (max-width: 767px) {
   #top .login {
-    float: left;
+    float: none;
   }
 }
 #top.light {
@@ -3722,3 +3722,8 @@ button.btn.btn-no-margin {
     color: white;
     background-color: #006600;
   }
+
+
+#top {
+  text-align: center;
+}
