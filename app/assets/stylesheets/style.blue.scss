@@ -369,6 +369,9 @@ ul.list-style-none {
   #top .login {
     float: none;
   }
+  #top {
+    text-align: center;
+  }
 }
 #top.light {
   background: #fff;
@@ -3722,8 +3725,3 @@ button.btn.btn-no-margin {
     color: white;
     background-color: #006600;
   }
-
-
-#top {
-  text-align: center;
-}
