@@ -3712,10 +3712,13 @@ color: green;
 button.btn.btn-no-margin {
     color: #006600;
     background-color: #66ff00;
-    border-bottom: solid;
-    border-bottom-width: 0.5px;
     border: solid;
     border-width: 0.5px;
     height: 34px;
     border-color: #ccc;
+  }
+
+  button.btn.btn-no-margin:hover {
+    color: white;
+    background-color: #006600;
   }
