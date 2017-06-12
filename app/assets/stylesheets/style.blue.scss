@@ -3661,7 +3661,7 @@ button.btn.btn-no-margin {
       width: 145px !important;
   }
 
-  @media (min-width: 1092px) {
+  @media (max-width: 1092px) {
     .panel.sidebar-menu.fclass {
     background: #fff;
     margin: 0 0 20px;
