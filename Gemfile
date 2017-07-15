@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.3.4'
 gem 'rails', '4.2.4'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -35,6 +35,7 @@ gem 'cancancan'
 gem 'sitemap_generator'
 gem 'activeadmin_addons'
 gem 'slim'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug'
