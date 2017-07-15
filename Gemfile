@@ -19,7 +19,7 @@ gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'cloudinary'
 gem 'mini_magick'
 gem 'ancestry', '~> 2.1.0'
-gem 'active_admin-sortable_tree'
+gem 'active_admin-sortable_tree', '0.3.0'
 gem 'active_skin'
 gem 'ckeditor'
 gem 'unicorn', group: :production
@@ -35,7 +35,6 @@ gem 'cancancan'
 gem 'sitemap_generator'
 gem 'activeadmin_addons'
 gem 'slim'
-gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug'
