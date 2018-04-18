@@ -92,6 +92,7 @@ ul.category-menu > li > ul > li.active > a {
 }
 .ribbon.gift .theribbon{
   width: 183px!important;
+  top: -125px!important;
 }
 
 .comment-replies {
@@ -117,4 +118,9 @@ ul.category-menu > li > ul > li.active > a {
 .attachment p {
   display: inline-block;
   padding-right: 10px;
+}
+
+.stripe-button-el {
+  margin-right: 10px;
+  float: right;
 }
