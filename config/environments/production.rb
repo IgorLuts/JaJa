@@ -50,16 +50,16 @@ Rails.application.configure do
 
     # ActionMailer Config
   config.action_mailer.delivery_method = :smtp
-
-  config.action_mailer.smtp_settings = {
-    address: "smtp.yandex.ru",
-    port: 587,
-    domain: "jaja.com.ua",
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: "admin@jaja.com.ua",
-    password: Rails.application.secrets.mail_password
-  }
+  
+    config.action_mailer.smtp_settings = {
+      address: "smtp.sendgrid.net",
+      port: 587,
+      domain: "gymrek.com",
+      authentication: "plain",
+      enable_starttls_auto: true,
+      user_name: "apikey",
+      password: Rails.application.secrets.mail_password
+    }
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
