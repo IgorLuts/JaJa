@@ -33,9 +33,9 @@
                     <%= link_to "О нас", page_path("o-nas") %>
                 </li>
             </ul>
-            <%= search_form_for Product.ransack(params[:q]), html: {class: "navbar-form navbar-right", role: "search" } do |f| %>
+            <%= search_form_for Product.ransack(params[:q]), html: {class: "navbar-form navbar-right", role: "поиск" } do |f| %>
                 <div class="input-group">
-                  <%= f.search_field :title_cont, placeholder: "Search", class: "form-control" %>
+                  <%= f.search_field :title_cont, placeholder: "Поиск", class: "form-control" %>
                   <span class="input-group-btn">
                     <button type="submit" class="btn btn-no-margin"><i class="fa fa-search"></i></button>
                   </span>
