@@ -31,7 +31,7 @@ class OrdersController < ApplicationController
         UserMailer.order_notification(@order).deliver_later
         ShoppingCart.destroy(session[:shopping_cart_id])
         session[:shopping_cart_id] = nil
-        format.html { redirect_to root_path, notice: 'Your order was successfully decorated.' }
+        format.html { redirect_to root_path, notice: 'Ваш заказ успешно оформлен, наш менеджер свяжется с вами в ближайшее время.' }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }

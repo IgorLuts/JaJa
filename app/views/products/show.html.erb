@@ -45,10 +45,10 @@
                 <hr>
                   <%= form_for ShoppingCartItem.new, :url => shopping_cart_items_path(:product_id => @product), :html => { :class => 'form-inline cart_item_form'} do |f| %>
                     <div class="form-group">
-                      <%= f.label :quantity, "Quantity: "%>
+                      <%= f.label :quantity, "Количество: "%>
                       <%= f.number_field :quantity, value: 1, class: 'form-control' %>
                     </div>
-                    <%= f.submit "Buy", class:"btn btn-primary" %>
+                    <%= f.submit "Купить", class:"btn btn-primary" %>
                   <% end %>
             </div>
             <div class="ribbon new presents">
