@@ -30,14 +30,14 @@
                 <% if @product.old_price %>
                   <p class="price">
                     <span class="sale">
-                      <%= @product.old_price %> EUR
+                      <%= @product.old_price %> грн
                     </span>
                     <span>
-                      <%= @product.price %> EUR
+                      <%= @product.price %> грн
                     </span>
                   </p>
                 <% else %>
-                  <p class="price"><%= @product.price %> EUR</p>
+                  <p class="price"><%= @product.price %> грн</p>
                 <% end %>
                     <meta itemprop="price" content="<%= @product.price %>">
                     <meta itemprop="priceCurrency" content="UAH">
@@ -53,9 +53,9 @@
             </div>
             <div class="ribbon new presents">
                 <% if @product.available %>
-                  <div class="theribbon">in stock</div>
+                  <div class="theribbon">в наличии</div>
                 <% else %>
-                  <div class="theribbon">under the order</div>
+                  <div class="theribbon">под заказ</div>
                 <% end %>
                 <div class="ribbon-background"></div>
             </div>
@@ -83,12 +83,12 @@
     <div class="box product_tab" id="details">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a></li>
+          <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Описание</a></li>
           <% if @product.characteristics && @product.characteristics != "" %>
-            <li role="presentation"><a href="#characteristics" aria-controls="characteristics" role="tab" data-toggle="tab">Characteristics</a></li>
+            <li role="presentation"><a href="#characteristics" aria-controls="characteristics" role="tab" data-toggle="tab">Характеристики</a></li>
           <% end %>
-          <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">reviews (<%= @comments_count %>)</a></li>
-          <li role="presentation"><a href="#recent" aria-controls="recent" role="tab" data-toggle="tab">Similar products</a></li>
+          <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">Отзывы (<%= @comments_count %>)</a></li>
+          <li role="presentation"><a href="#recent" aria-controls="recent" role="tab" data-toggle="tab">Похожие товары</a></li>
         </ul>
 
         <!-- Tab panes -->

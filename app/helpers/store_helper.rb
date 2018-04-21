@@ -17,11 +17,11 @@ module StoreHelper
   def message(features)
     case features
     when 'sale'
-      'sale'
+      'Акция'
     when 'new'
-      'new'
+      'Можно выбрать цвет!'
     when 'gift'
-      'Free shipping'
+      'Бесплатная доставка'
     end
   end
 end
