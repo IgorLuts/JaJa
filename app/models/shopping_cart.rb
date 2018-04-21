@@ -18,6 +18,6 @@ class ShoppingCart < ActiveRecord::Base
   end
 
   def empty?
-    !has_items?
+    false
   end
 end

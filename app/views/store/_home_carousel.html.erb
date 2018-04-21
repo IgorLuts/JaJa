@@ -19,12 +19,12 @@ _________________________________________________________ -->
                   <h3>
                     <%= product.title %>
                   </h3>
-                  <p class="price"><%= number_to_currency product.price %></p>
+                  <p class="price">EUR <%= product.price %></p>
                   <p><%= truncate(product.description, length: 200, separator: ' ', :escape => false) %></p>
                   <p class="buttons">
                     <%= link_to "Подробно", product_path(product), class:"btn btn-default" %>
                     <%= link_to shopping_cart_items_path(:product_id => product), :method => 'POST', class:"btn btn-primary" do %>
-                      <i class="fa fa-shopping-cart"></i>Купить
+                      <i class="fa fa-shopping-cart"></i>Buy
                     <% end %>
                   </p>
                 </div>
