@@ -17,4 +17,7 @@ class ShoppingCart < ActiveRecord::Base
     delete(old_record)
   end
 
+  def empty?
+    !has_items?
+  end
 end
