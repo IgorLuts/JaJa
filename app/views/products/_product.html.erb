@@ -9,7 +9,7 @@
               <h3>
                   <%= link_to product.title, product_path(product) %>
               </h3>
-                  <p class="price"><%= product.price.to_i %> грн</p>
+                  <p class="price"><%= product.price.to_i.to_i %> грн</p>
               <p>
                   <%= link_to "Подробнее", product_path(product), class:"btn btn-default" %>
                   <%= link_to shopping_cart_items_path(:product_id => product), :method => 'POST', class:"btn btn-primary" do %>
