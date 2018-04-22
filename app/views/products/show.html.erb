@@ -30,14 +30,14 @@
                 <% if @product.old_price %>
                   <p class="price">
                     <span class="sale">
-                      <%= @product.old_price %> грн
+                      <%= @product.old_price.to_i %> грн
                     </span>
                     <span>
-                      <%= @product.price %> грн
+                      <%= @product.price.to_i %> грн
                     </span>
                   </p>
                 <% else %>
-                  <p class="price"><%= @product.price %> грн</p>
+                  <p class="price"><%= @product.price.to_i %> грн</p>
                 <% end %>
                     <meta itemprop="price" content="<%= @product.price %>">
                     <meta itemprop="priceCurrency" content="UAH">
