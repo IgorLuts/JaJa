@@ -10,12 +10,12 @@ RSpec.describe Order, type: :model do
   it { should validate_presence_of :adress }
   it { should validate_presence_of :phone }
 
-  describe 'order methods' do  
+  describe 'order methods' do
     before(:example) do
       @cart = create(:shopping_cart)
-      product = create(:product) 
-      @order = create(:order) 
-      @cart.add(product, product.price)
+      product = create(:product)
+      @order = create(:order)
+      @cart.add(product, product.price.to_i)
       @order.add_line_items_from_cart(@cart)
     end
 

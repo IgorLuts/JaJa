@@ -10,7 +10,7 @@ RSpec.describe OrdersController, type: :controller do
 
     before { get :index }
 
-    it 'populates an array of all orders' do     
+    it 'populates an array of all orders' do
       expect(assigns(:orders)).to match_array(orders)
     end
 
@@ -47,8 +47,8 @@ RSpec.describe OrdersController, type: :controller do
     describe 'cart not empty' do
       before(:example) do
         @shopping_cart = create(:shopping_cart)
-        product = create(:product) 
-        @shopping_cart.add(product, product.price)
+        product = create(:product)
+        @shopping_cart.add(product, product.price.to_i)
         session[:shopping_cart_id] = @shopping_cart.id
       end
 
@@ -67,11 +67,11 @@ RSpec.describe OrdersController, type: :controller do
 
   describe 'POST #create' do
     context 'with valid attributes' do
-      it 'saves the new order in database' do 
+      it 'saves the new order in database' do
         expect {post :create, order: attributes_for(:order)}.to change(Order, :count).by(1)
       end
 
-      it 'redirect to root_path' do 
+      it 'redirect to root_path' do
         post :create, order: attributes_for(:order)
         expect(response).to redirect_to root_path
       end
