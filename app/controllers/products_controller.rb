@@ -4,7 +4,10 @@ class ProductsController < ApplicationController
 
   def index
     @q = Product.ransack(params[:q])
-    @products = @q.result.joins(:brand).order('brands.name DESC').page(params[:page])
+    @products = @q.result.joins(:brand)
+                  .order('brands.name DESC')
+                  .order("products.price DESC")
+                  .page(params[:page])
   end
 
   def show
